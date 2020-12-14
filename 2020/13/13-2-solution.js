@@ -27,7 +27,7 @@ function bruteForceSolution() {
 }
 
 // This soltuion is nice, did not come up with this myself tho...
-function niceSolution(ice) {
+function niceSolution() {
   const inputs = data[1]
     .split(",")
     .map((id, i) => ({ id: parseInt(id), i }))
