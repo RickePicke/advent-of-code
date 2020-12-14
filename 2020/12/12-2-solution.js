@@ -19,10 +19,9 @@ const move = (waypoint, sum, value) => {
 }
 
 const calcNextWaypoint = (waypoint, action, value) => {
-  const x = directions.reduce((acc, curr) => {
+  return directions.reduce((acc, curr) => {
     return { ...acc, [calcNextDirection(action, value, curr)]: waypoint[curr]  }
   }, {});
-  return x;
 }
 
 const result = data.reduce(({ sum, waypoint }, curr) => {
@@ -44,5 +43,5 @@ const result = data.reduce(({ sum, waypoint }, curr) => {
 
 const { E, S, N, W } = result.sum;
 const manhattanPostion = Math.abs(N - S) + Math.abs(W - E);
-console.log(result);
+
 console.log(manhattanPostion);
