@@ -15,8 +15,7 @@ function bruteForceSolution() {
       const { busId, tInterval } = idsAndIntervals[idx];
 
       if (!timestamp) {
-        timestamp = busId * i + 1058443396696700;
-        timestamp === 1058443396696792 && console.log(timestamp);
+        timestamp = busId * i;
       } else if (busId - (timestamp % busId) !== tInterval) {
         timestamp = null;
         break;
