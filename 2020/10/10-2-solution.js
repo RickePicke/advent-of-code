@@ -1,5 +1,4 @@
 const fs = require("fs");
-const { start } = require("repl");
 const data = fs
   .readFileSync("./10-x-data.txt")
   .toString()
